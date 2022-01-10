@@ -61,7 +61,7 @@ def main(input_filepath, output_filepath):
             ## TODO: Implement the validation pass and print out the validation accuracy
             print(f"Training loss: {running_loss/len(trainloader)}") 
     print(model)
-    torch.save(model.state_dict(), output_filepath + '/trained_model.pth')  
+    torch.save(model.state_dict(), output_filepath + '/my_trained_model.pth')  
 
 
 if __name__ == '__main__':

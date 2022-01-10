@@ -33,6 +33,10 @@ data: requirements
 train: requirements
 	$(PYTHON_INTERPRETER) src/models/train_model.py data/processed models/trained_model
 
+## Evaluate model
+evaluate: requirements
+	$(PYTHON_INTERPRETER) src/models/predict_model.py models/trained_model/my_trained_model.pth data/examples/example_images.npy
+
 ## Delete all compiled Python files
 clean:
 	find . -type f -name "*.py[co]" -delete
