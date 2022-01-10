@@ -1,7 +1,18 @@
-First_cookiecutter
+MNIST with cookiecutter organisation
 ==============================
 
-M6 exercise
+M6 exercise.
+
+The way to run this project is as follow:
+
+>make data
+will do the data preprocessing. It will run `src/data/make_dataset.py` and will take the data from `data/raw` and process into `data/processed`.
+
+>make train
+will train the data in  `data/processed` and returns the model in `models/trained_model`. I'll think of a way to have multiple model and chose them in the argument.
+
+>make evaluate
+will make prediction on generated example from the test set `data/examples/example_images.npy`.
 
 Project Organization
 ------------
