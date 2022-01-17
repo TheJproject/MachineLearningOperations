@@ -71,25 +71,25 @@ Project Organization
 --------
 ## Missing
 ### M6
-- [] src/visualization/visualize.py
+- [ ] src/visualization/visualize.py
 ### M7
-- [] Go over the most complicated file in your project. Be critical and add comments where the logic behind the code is not easily understandable.
-- [] Add docstrings to at least two python function/methods.
+- [ ] Go over the most complicated file in your project. Be critical and add comments where the logic behind the code is not easily understandable.
+- [ ] Add docstrings to at least two python function/methods.
 ### M8
-- [] dvc
+- [ ] dvc
 
 ### M10
-- [] hydra on mnist (same as vae)
+- [ ] hydra on mnist (same as vae)
 
 ### M13
-- [] create report you can share
+- [ ] create report you can share
 
 ### M14
-- [] Pytorchlignting (All)
+- [ ] Pytorchlignting (All)
 ### M15 
-- [] Pytest that works
-- [] Github action that works
-- [] Auto linter that works
+- [ ] Pytest that works
+- [ ] Github action that works
+- [ ] Auto linter that works
 
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
