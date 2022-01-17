@@ -10,6 +10,8 @@ from pathlib import Path
 from dotenv import find_dotenv, load_dotenv
 import torch
 from torch import nn, optim
+import wandb
+wandb.init(project='SOLO EX',entity='TheJproject')
 
 
 
@@ -42,9 +44,10 @@ def main(input_filepath, output_filepath):
     trainloader = torch.utils.data.DataLoader(train_data, batch_size=64, shuffle=True)
     criterion = nn.NLLLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.003)
-
-
-    epochs = 30
+    wandb.log({"examples" : [wandb.Image(im) for im in train_images[:]]})
+    # Magic
+    wandb.watch(model, log_freq=100)    
+    epochs = 35
 
     for e in range(epochs):
         running_loss = 0
@@ -60,6 +63,7 @@ def main(input_filepath, output_filepath):
         else:
             ## TODO: Implement the validation pass and print out the validation accuracy
             print(f"Training loss: {running_loss/len(trainloader)}") 
+            wandb.log({"loss": running_loss/len(trainloader)})
     print(model)
     torch.save(model.state_dict(), output_filepath + '/my_trained_model.pth')  
 

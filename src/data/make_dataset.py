@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
-import click
-import numpy as np
 import logging
 from pathlib import Path
-from dotenv import find_dotenv, load_dotenv
-from mnist_loader import mnist
+
+import click
+import numpy as np
 import torch
+from dotenv import find_dotenv, load_dotenv
+
+from mnist_loader import mnist
+
 
 @click.command()
 @click.argument('input_filepath', type=click.Path(exists=True))
@@ -24,11 +27,11 @@ def main(input_filepath, output_filepath):
     torch.save(data_cleaned,output_path)
     torch.save(test_data_cleaned,output_path_test)
 
-    #Generate 10 random picture for testing
+    #Generate 10 random picture for testing (OR 1000)
     output_path_example = data_folder + '/data/examples/example_images.npy'
     test_examples_10 ={}
     test_examples_10['images'] = test_data_cleaned['images'][:1000]
-    print(test_examples_10['images'].size())
+    #print(test_examples_10['images'].size())
     test_examples_10['labels'] = test_data_cleaned['labels'][:1000]
     torch.save(test_examples_10,output_path_example)
 

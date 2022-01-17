@@ -1,0 +1,25 @@
+{
+    "os": "Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.29",
+    "python": "3.8.10",
+    "heartbeatAt": "2022-01-17T11:15:38.900479",
+    "startedAt": "2022-01-17T11:15:37.713315",
+    "docker": null,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "data/processed",
+        "models/trained_model"
+    ],
+    "state": "running",
+    "program": "src/models/train_model.py",
+    "codePath": "src/models/train_model.py",
+    "git": {
+        "remote": "git@github-PERSONAL:TheJproject/MachineLearningOperations.git",
+        "commit": "190c6a6da4ed0f0131e112cefcb1e7290c9e42a7"
+    },
+    "email": null,
+    "root": "/mnt/c/Users/Jonah/OneDrive/Documents/MLops/M4_GITHUB_EX/MLops_EX/first_cookiecutter",
+    "host": "LAPTOP-5RCDMURE",
+    "username": "jonah",
+    "executable": "/usr/bin/python3"
+}

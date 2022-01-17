@@ -1,23 +1,23 @@
-import numpy as np
-from torchvision import transforms
-from pathlib import Path
 import glob
-import torch
+from pathlib import Path
 
+import numpy as np
+import torch
+from torchvision import transforms
 
 
 def mnist(input_filepath):
-    # exchange with the corrupted mnist dataset
+    ''' Takes a given filepath and looks for file starting with train.'''
     file_list = glob.glob(input_filepath + 'train*')
     data_all = [np.load(fname) for fname in file_list]
     data_merged = {}
     for data in data_all:
         data_merged = dict_update_without_overwrite(data_merged,data)
-    data_merged['images'] = torch.tensor(data_merged['images'])
+    data_merged['images'] = torch.tensor(np.array(data_merged['images']))
     data_merged['images'] = data_merged['images'].view(25000,1,28,28)
     data_transforms = transforms.Normalize((0), (1))
     data_merged['images'] = data_transforms(data_merged['images'])
-    data_merged['labels'] = torch.tensor(data_merged['labels']).view(25000)
+    data_merged['labels'] = torch.tensor(np.array(data_merged['labels'])).view(25000)
 
     test_file_list = glob.glob(input_filepath + 'test.npz')
     test_data_all = [np.load(fname) for fname in test_file_list]
