@@ -20,6 +20,8 @@ Project Organization
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
+    ├── .github
+    │   └── workflows 
     ├── data
     │   ├── external       <- Data from third party sources.
     │   ├── interim        <- Intermediate data that has been transformed.
@@ -29,12 +31,15 @@ Project Organization
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
+    │    └── trained_model    
+    │    └── model.py
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
     │                         the creator's initials, and a short `-` delimited description, e.g.
     │                         `1.0-jqp-initial-data-exploration`.
     │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+    │
+    ├── tests 
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting
@@ -64,5 +69,27 @@ Project Organization
 
 
 --------
+## Missing
+### M6
+- [] src/visualization/visualize.py
+### M7
+- [] Go over the most complicated file in your project. Be critical and add comments where the logic behind the code is not easily understandable.
+- [] Add docstrings to at least two python function/methods.
+### M8
+- [] dvc
+
+### M10
+- [] hydra on mnist (same as vae)
+
+### M13
+- [] create report you can share
+
+### M14
+- [] Pytorchlignting (All)
+### M15 
+- [] Pytest that works
+- [] Github action that works
+- [] Auto linter that works
+
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
